@@ -3,7 +3,7 @@ import {
   Bot, Users, Calendar, Database, Search, Send, X, ChevronDown, ChevronUp,
   FileText, MapPin, Clock, CheckCircle2, Sparkles, Cpu, Camera, TrendingUp,
   Leaf, Layers, Zap, Info, Bell, RefreshCw, Ticket, Mail, GraduationCap,
-  Activity, Hash,
+  Activity, Hash, Code, Music, Globe, Trophy, Shield, Rocket, Briefcase, Gamepad2, Mic,
 } from "lucide-react";
 
 /* =====================================================================
@@ -26,6 +26,48 @@ const KB_DOCS = [
     ],
   },
   {
+    id: "club-webdev", type: "club", title: "Web & Open Source Society Handbook",
+    file: "clubs/web_opensource_handbook.pdf", pages: 5,
+    chunks: [
+      {
+        text: "The Web & Open Source Society meets every Wednesday and Saturday at 5:00 PM in the Turing Computing Center, Lab 3. Recruitment status: OPEN for all years. Members build fullstack web applications, contribute to open-source software on GitHub, and conduct developer bootcamps in React, TypeScript, and Node.js.",
+        ans: "The Web & Open Source Society meets every Wednesday and Saturday at 5:00 PM in the Turing Computing Center (Lab 3). Recruitment is OPEN, and members build fullstack web applications and contribute to open-source projects.",
+      },
+      {
+        text: "Web & Open Source Society highlights: Git/GitHub workshops, open-source sprints for Hacktoberfest, and client projects for campus organizations. Club lead: Devansh Gupta (3rd year, Information Technology). Contact: dev@campuspulse.edu.",
+        ans: "The society organizes Git workshops, open-source sprints, and campus software projects. Its lead is Devansh Gupta (dev@campuspulse.edu).",
+      },
+    ],
+  },
+  {
+    id: "club-cyber", type: "club", title: "Cybersecurity & Ethical Hacking Guide",
+    file: "clubs/cybersecurity_club_guide.pdf", pages: 4,
+    chunks: [
+      {
+        text: "The Cybersecurity & Ethical Hacking Club meets every Thursday at 6:30 PM in the Cyber Lab (Tech Tower, Room 401). Recruitment status: OPEN. The club specializes in offensive security, defensive system hardening, cryptography, network vulnerability analysis, and inter-college Capture The Flag (CTF) tournaments.",
+        ans: "The Cybersecurity & Ethical Hacking Club meets Thursdays at 6:30 PM in Cyber Lab (Tech Tower 401). Recruitment is OPEN, and activities focus on CTFs, penetration testing, and security hardening.",
+      },
+      {
+        text: "Cybersecurity Club resources: isolated sandbox testbeds, penetration testing tool suites, and weekly security briefings. Club lead: Tanvi Deshmukh (4th year, Computer Science). Contact: cyber@campuspulse.edu.",
+        ans: "Members get access to isolated testbeds and penetration testing tool suites. The club lead is Tanvi Deshmukh (cyber@campuspulse.edu).",
+      },
+    ],
+  },
+  {
+    id: "club-game", type: "club", title: "Game Development & VR Guild Handbook",
+    file: "clubs/gamedevel_vr_guild.pdf", pages: 4,
+    chunks: [
+      {
+        text: "The Game Development & VR Guild meets every Friday at 5:00 PM in the Media Arts Lab, Studio 102. Recruitment status: OPEN. Members design and program 2D and 3D indie games, experiment with VR headsets, build custom shaders, and participate in global game jams using Unity, Unreal Engine, and Godot.",
+        ans: "The Game Development & VR Guild meets Fridays at 5:00 PM in Media Arts Lab Studio 102. Recruitment is OPEN for programmers, artists, and storytellers building games in Unity, Unreal, and Godot.",
+      },
+      {
+        text: "Game Dev Guild perks: high-end GPU workstations, Meta Quest VR testkits, drawing tablets, and asset libraries. Club lead: Neil Fernandes (3rd year, Digital Media & Game Design). Contact: gamedev@campuspulse.edu.",
+        ans: "Members have access to GPU workstations, VR headsets, and graphics tablets. The lead is Neil Fernandes (gamedev@campuspulse.edu).",
+      },
+    ],
+  },
+  {
     id: "club-photo", type: "club", title: "Lens & Light Photography Club Guide",
     file: "clubs/photography_club_guide.pdf", pages: 4,
     chunks: [
@@ -36,6 +78,34 @@ const KB_DOCS = [
       {
         text: "Photography Club highlights: monthly photo walks, a semester exhibition at the Campus Art Gallery, and portrait workshops. Beginners are welcome; bring any camera or a smartphone. Club lead: Meera Iyer (2nd year, Design).",
         ans: "Beginners are welcome (a smartphone is fine). The club hosts monthly photo walks, portrait workshops and a semester exhibition. The lead is Meera Iyer.",
+      },
+    ],
+  },
+  {
+    id: "club-music", type: "club", title: "Campus Beats & Harmony Music Club Charter",
+    file: "clubs/music_club_charter.pdf", pages: 5,
+    chunks: [
+      {
+        text: "Campus Beats & Harmony (Music Club) meets Tuesdays and Fridays at 5:30 PM in the Music Hall, Performing Arts Center. Recruitment status: OPEN for vocalists, instrumentalists (guitar, drums, keyboards, violin, bass), audio engineers, and songwriters.",
+        ans: "The Music Club (Campus Beats & Harmony) meets Tuesdays and Fridays at 5:30 PM in the Music Hall (Performing Arts Center). Recruitment is OPEN for vocalists, instrumentalists, and sound engineers.",
+      },
+      {
+        text: "Music Club activities include acoustic courtyard sessions, recording studio time, the annual Battle of the Bands, and inter-college cultural fest performances. Club lead: Sahana Krishnan (2nd year, Architecture). Contact: music@campuspulse.edu.",
+        ans: "Activities include weekly acoustic jams, studio recording, and Battle of the Bands. The lead is Sahana Krishnan (music@campuspulse.edu).",
+      },
+    ],
+  },
+  {
+    id: "club-drama", type: "club", title: "Thespians Drama & Theatre Society Handbook",
+    file: "clubs/thespians_theatre_handbook.pdf", pages: 4,
+    chunks: [
+      {
+        text: "The Thespians Drama & Theatre Society meets Mondays and Thursdays at 6:00 PM in the Open Amphitheatre and Old Auditorium. Recruitment status: CLOSED for the current term as casting for the annual play is finalized. Waitlist is open for crew and upcoming spring auditions.",
+        ans: "The Thespians Theatre Society meets Mondays and Thursdays at 6:00 PM in the Amphitheatre. Recruitment is currently CLOSED for actors, but waitlist requests are accepted for production crew and spring auditions.",
+      },
+      {
+        text: "Thespians society focuses on stage acting, street play (Nukkad Natak), scriptwriting, lighting, and sound direction. Club lead: Kabir Sen (3rd year, English Literature). Contact: theatre@campuspulse.edu.",
+        ans: "The society produces stage plays, street theatre, and script workshops. The lead is Kabir Sen (theatre@campuspulse.edu).",
       },
     ],
   },
@@ -54,6 +124,34 @@ const KB_DOCS = [
     ],
   },
   {
+    id: "club-ecell", type: "club", title: "E-Cell (Entrepreneurship & Startup Cell) Charter",
+    file: "clubs/ecell_startup_charter.pdf", pages: 6,
+    chunks: [
+      {
+        text: "The Entrepreneurship & Startup Cell (E-Cell) meets Wednesdays at 4:30 PM in the Incubation Center, Room 101. Recruitment status: OPEN. E-Cell nurtures student ventures through founder mentorship, investor networking, pitch decks preparation, and pre-seed incubation grants.",
+        ans: "E-Cell meets Wednesdays at 4:30 PM in Incubation Center Room 101. Recruitment is OPEN for students passionate about startups, venture capital, and building products.",
+      },
+      {
+        text: "E-Cell flagship initiatives include Campus Shark Tank, startup hack nights, angel investor demo days, and founder fireside chats. Club lead: Priya Sharma (4th year, Management Studies). Contact: ecell@campuspulse.edu.",
+        ans: "Flagship programs include Campus Shark Tank, founder talks, and seed grant mentorship. The club lead is Priya Sharma (ecell@campuspulse.edu).",
+      },
+    ],
+  },
+  {
+    id: "club-consulting", type: "club", title: "Consulting & Strategy Club Guide",
+    file: "clubs/consulting_club_guide.pdf", pages: 4,
+    chunks: [
+      {
+        text: "The Consulting & Strategy Club meets Thursdays at 5:00 PM in the Management Block, Case Study Room B. Recruitment status: CLOSED (term cohort full at 45 members). Waitlist is open for the January 2027 recruitment cycle.",
+        ans: "The Consulting & Strategy Club meets Thursdays at 5:00 PM in Management Block Case Study Room B. Recruitment is currently CLOSED, but waitlist applications are open for the January 2027 cohort.",
+      },
+      {
+        text: "Consulting Club members prepare for management consulting case interviews (MBB), practice market sizing, crack business strategy cases, and compete in national case competitions. Club lead: Aditya Verma (3rd year, Economics). Contact: consulting@campuspulse.edu.",
+        ans: "Members practice management consulting case frameworks, market sizing, and mock interviews. The lead is Aditya Verma (consulting@campuspulse.edu).",
+      },
+    ],
+  },
+  {
     id: "club-eco", type: "club", title: "Sustainability Collective Overview",
     file: "clubs/sustainability_collective.pdf", pages: 5,
     chunks: [
@@ -64,6 +162,48 @@ const KB_DOCS = [
       {
         text: "The Sustainability Collective organises the annual Eco Fair, tree-planting weekends and a green-campus scorecard. Club lead: Ananya Rao (3rd year, Environmental Science). Contact: green@campuspulse.edu.",
         ans: "The collective organises the Eco Fair, tree-planting weekends and a green-campus scorecard. Its lead is Ananya Rao (green@campuspulse.edu).",
+      },
+    ],
+  },
+  {
+    id: "club-cleanenergy", type: "club", title: "Clean Energy & EV Society Charter",
+    file: "clubs/clean_energy_ev_charter.pdf", pages: 4,
+    chunks: [
+      {
+        text: "The Clean Energy & EV Society meets Tuesdays at 4:00 PM in the Renewable Energy Tech Center. Recruitment status: OPEN. Members conduct research on electric vehicle powertrains, solar charging stations, lithium battery recycling, and campus microgrids.",
+        ans: "The Clean Energy & EV Society meets Tuesdays at 4:00 PM in the Renewable Energy Tech Center. Recruitment is OPEN, focusing on electric vehicles, solar power, and campus clean tech.",
+      },
+      {
+        text: "The Clean Energy Society collaborates with the Sustainability Collective on campus solar rooftop monitoring and building an EV prototype kart. Club lead: Farhan Qureshi (3rd year, Electrical Engineering). Contact: cleanenergy@campuspulse.edu.",
+        ans: "The society works on solar energy monitoring and student EV kart prototyping. The lead is Farhan Qureshi (cleanenergy@campuspulse.edu).",
+      },
+    ],
+  },
+  {
+    id: "club-mun", type: "club", title: "Model United Nations & Debate Society Guide",
+    file: "clubs/mun_debate_society.pdf", pages: 5,
+    chunks: [
+      {
+        text: "The Model United Nations & Debate Society meets Wednesdays at 6:00 PM in the Law & Humanities Seminar Hall. Recruitment status: OPEN. The society trains delegates in parliamentary debating, multilateral diplomacy, policy resolution drafting, and geopolitical conflict negotiation.",
+        ans: "The MUN & Debate Society meets Wednesdays at 6:00 PM in the Law & Humanities Seminar Hall. Recruitment is OPEN for students interested in public speaking, parliamentary debate, and diplomacy.",
+      },
+      {
+        text: "The society hosts the annual PulseMUN conference, inter-college mock parliaments, and sends fully sponsored delegations to national collegiate MUNs. Club lead: Ishaan Malhotra (3rd year, Political Science). Contact: mun@campuspulse.edu.",
+        ans: "The society organizes the annual PulseMUN conference and parliamentary debate tournaments. The lead is Ishaan Malhotra (mun@campuspulse.edu).",
+      },
+    ],
+  },
+  {
+    id: "club-sports", type: "club", title: "Campus Sports & Athletics League Handbook",
+    file: "clubs/sports_athletics_handbook.pdf", pages: 5,
+    chunks: [
+      {
+        text: "The Campus Sports & Athletics League meets Mondays, Wednesdays, and Fridays with morning sessions at 6:30 AM and evening training at 5:00 PM at the University Sports Complex & Running Track. Recruitment status: OPEN for both recreational and competitive athletes.",
+        ans: "The Campus Sports League meets Mon, Wed, and Fri (6:30 AM & 5:00 PM) at the University Sports Complex. Recruitment is OPEN for intramural leagues, athletics, badminton, and fitness.",
+      },
+      {
+        text: "The Sports League organizes intra-college tournaments in badminton, football, basketball, and table tennis, as well as the annual 5K campus charity marathon. Club lead: Ritu Patel (4th year, Physical Education). Contact: sports@campuspulse.edu.",
+        ans: "The league organizes badminton, football, basketball tournaments, and campus fitness marathons. The lead is Ritu Patel (sports@campuspulse.edu).",
       },
     ],
   },
@@ -102,6 +242,66 @@ const KB_DOCS = [
     ],
   },
   {
+    id: "event-sharktank", type: "event", title: "Event Brief: Campus Shark Tank 2026",
+    file: "events/sharktank_2026_brief.pdf", pages: 3,
+    chunks: [
+      {
+        text: "Campus Shark Tank is on Saturday, November 28, 2026 at 2:00 PM in the Main Auditorium, Management Block. Top 10 shortlisted student startups pitch live in front of angel investors and VC partners. Total seed pool of INR 2,00,000 in equity-free grants. 150 spectator seats; RSVP link: campuspulse.edu/rsvp/sharktank-2026.",
+        ans: "Campus Shark Tank takes place on Saturday, November 28, 2026 at 2:00 PM in the Main Auditorium (Management Block). 10 student startups pitch for INR 2,00,000 in seed grants. Free spectator RSVP at campuspulse.edu/rsvp/sharktank-2026.",
+      },
+    ],
+  },
+  {
+    id: "event-ctf", type: "event", title: "Event Brief: CyberPulse CTF 2026",
+    file: "events/cyberpulse_ctf_brief.pdf", pages: 3,
+    chunks: [
+      {
+        text: "CyberPulse 2026 is a 12-hour Capture The Flag (CTF) security competition on Saturday, December 5, 2026 starting at 8:00 AM in the Cyber Lab (Tech Tower 401). Categories include Web Exploitation, Reverse Engineering, Cryptography, and Forensics. 100 seats available. RSVP link: campuspulse.edu/rsvp/cyberpulse-ctf.",
+        ans: "CyberPulse CTF is on Saturday, December 5, 2026 at 8:00 AM in the Cyber Lab (Tech Tower 401). A 12-hour challenge covering web security, crypto, and forensics with 100 seats. RSVP at campuspulse.edu/rsvp/cyberpulse-ctf.",
+      },
+    ],
+  },
+  {
+    id: "event-battlebands", type: "event", title: "Event Brief: Echoes Acoustic Night & Battle of the Bands",
+    file: "events/echoes_bands_brief.pdf", pages: 3,
+    chunks: [
+      {
+        text: "Echoes: Winter Acoustic Night & Battle of the Bands is on Saturday, December 12, 2026 at 6:00 PM in the Open Air Amphitheatre. Featuring 8 collegiate bands, live food trucks, and acoustic jams under the winter stars. Free entry; 250 seats. RSVP link: campuspulse.edu/rsvp/echoes-bands.",
+        ans: "Echoes Acoustic Night & Battle of the Bands takes place Saturday, December 12, 2026 at 6:00 PM in the Open Air Amphitheatre with 8 bands, food trucks, and 250 seats. RSVP at campuspulse.edu/rsvp/echoes-bands.",
+      },
+    ],
+  },
+  {
+    id: "event-mun", type: "event", title: "Event Brief: PulseMUN Diplomacy Summit 2026",
+    file: "events/pulsemun_2026_brief.pdf", pages: 3,
+    chunks: [
+      {
+        text: "PulseMUN 2026 Diplomacy Summit takes place on Friday, December 18, 2026 at 9:30 AM in the Law & Humanities Seminar Hall. Simulating UN General Assembly and Security Council debates on sustainable development and international security. 110 delegate seats; RSVP link: campuspulse.edu/rsvp/pulsemun-2026.",
+        ans: "PulseMUN 2026 Diplomacy Summit is on Friday, December 18, 2026 at 9:30 AM in the Law & Humanities Seminar Hall. Simulates UN committees with 110 delegate seats; RSVP at campuspulse.edu/rsvp/pulsemun-2026.",
+      },
+    ],
+  },
+  {
+    id: "event-marathon", type: "event", title: "Event Brief: Campus Run for Green 5K Marathon",
+    file: "events/run_for_green_brief.pdf", pages: 2,
+    chunks: [
+      {
+        text: "The Campus Run for Green 5K Charity Marathon is on Saturday, January 9, 2027 at 6:30 AM starting at the University Sports Complex running towards the Lake Perimeter. For every runner who completes the 5K, 2 native trees will be planted on campus. 300 spots available. RSVP link: campuspulse.edu/rsvp/run-for-green.",
+        ans: "The Campus Run for Green 5K Charity Marathon happens Saturday, January 9, 2027 at 6:30 AM at the University Sports Complex. 2 trees are planted per participant; 300 seats available. RSVP at campuspulse.edu/rsvp/run-for-green.",
+      },
+    ],
+  },
+  {
+    id: "event-gamejam", type: "event", title: "Event Brief: PixelCraft Indie Game Jam & VR Expo",
+    file: "events/pixelcraft_gamejam_brief.pdf", pages: 3,
+    chunks: [
+      {
+        text: "PixelCraft is a 36-hour Indie Game Jam and VR Expo taking place on Saturday, January 16, 2027 starting at 10:00 AM in the Media Arts Lab & Innovation Hub. Teams create 2D, 3D, or VR games around a mystery theme. Includes free pizza, asset pack licenses, and a community arcade playtest. 90 seats. RSVP link: campuspulse.edu/rsvp/pixelcraft-jam.",
+        ans: "PixelCraft 36-Hour Game Jam & VR Expo kicks off Saturday, January 16, 2027 at 10:00 AM in the Media Arts Lab. Teams build indie or VR games with 90 seats open. RSVP at campuspulse.edu/rsvp/pixelcraft-jam.",
+      },
+    ],
+  },
+  {
     id: "policy-join", type: "policy", title: "Policy 1.1: How to Join a Campus Club",
     file: "policies/joining_clubs_policy.pdf", pages: 2,
     chunks: [
@@ -110,8 +310,8 @@ const KB_DOCS = [
         ans: "To join a club, check that recruitment is OPEN, submit the membership form with your student email and a short note, then attend a trial meeting. The lead confirms within 3 working days, and you can join up to 3 clubs per semester.",
       },
       {
-        text: "Recruitment overview for Autumn 2026: OPEN clubs are Robotics & AI, Photography and Sustainability. CLOSED clubs: Finance & Investment Society (waitlist available until the January 2027 intake). Closed clubs accept waitlist requests only.",
-        ans: "Clubs currently recruiting: Robotics & AI, Photography and Sustainability. The Finance & Investment Society is closed but accepts waitlist requests until its January 2027 intake.",
+        text: "Recruitment overview for Autumn 2026: OPEN clubs include Robotics & AI, Web & Open Source, Cybersecurity, Game Development, Photography, Music (Campus Beats), E-Cell, Clean Energy, Model UN & Debate, and Sports & Athletics League. CLOSED clubs accepting waitlist only: Finance & Investment Society, Consulting & Strategy Club, and Thespians Drama Society.",
+        ans: "Clubs currently recruiting (OPEN): Robotics & AI, Web & Open Source, Cybersecurity, Game Dev, Photography, Music, E-Cell, Clean Energy, Model UN & Debate, and Sports League. Closed clubs accepting waitlist: Finance Society, Consulting & Strategy, and Thespians Theatre.",
       },
     ],
   },
@@ -154,11 +354,46 @@ const CLUBS = [
     desc: "Build autonomous robots, train ML models and compete in inter-college tournaments. Beginners welcome.",
   },
   {
+    id: "club-webdev", name: "Web & Open Source Society", category: "Tech", status: "Open",
+    meeting: "Wed & Sat, 5:00 PM", location: "Turing Computing Center, Lab 3",
+    members: 56, lead: "Devansh Gupta", icon: Code,
+    grad: "from-blue-600 to-cyan-500", chip: "bg-blue-50 text-blue-700",
+    desc: "Build fullstack web applications, contribute to open source on GitHub, and organize developer hackathons.",
+  },
+  {
+    id: "club-cyber", name: "Cybersecurity & Ethical Hacking", category: "Tech", status: "Open",
+    meeting: "Thursdays, 6:30 PM", location: "Cyber Lab, Tech Tower 401",
+    members: 39, lead: "Tanvi Deshmukh", icon: Shield,
+    grad: "from-slate-700 to-zinc-900", chip: "bg-slate-100 text-slate-800",
+    desc: "Offensive security, capture-the-flag (CTF) challenges, system defense, and cryptography workshops.",
+  },
+  {
+    id: "club-game", name: "Game Development & VR Guild", category: "Tech", status: "Open",
+    meeting: "Fridays, 5:00 PM", location: "Media Arts Lab, Studio 102",
+    members: 42, lead: "Neil Fernandes", icon: Gamepad2,
+    grad: "from-fuchsia-600 to-pink-500", chip: "bg-fuchsia-50 text-fuchsia-700",
+    desc: "Design 2D/3D indie games, shaders, and immersive virtual reality experiences using Unity, Unreal, and Godot.",
+  },
+  {
     id: "club-photo", name: "Lens & Light Photography", category: "Arts", status: "Open",
     meeting: "Wednesdays, 5:30 PM", location: "Arts Annex, Studio B",
     members: 35, lead: "Meera Iyer", icon: Camera,
     grad: "from-rose-500 to-orange-400", chip: "bg-rose-50 text-rose-700",
     desc: "Photo walks, portrait workshops, a shared darkroom and a camera lending library.",
+  },
+  {
+    id: "club-music", name: "Campus Beats & Harmony (Music)", category: "Arts", status: "Open",
+    meeting: "Tue & Fri, 5:30 PM", location: "Music Hall, Performing Arts Center",
+    members: 52, lead: "Sahana Krishnan", icon: Music,
+    grad: "from-purple-600 to-indigo-600", chip: "bg-purple-50 text-purple-700",
+    desc: "Vocalists, bands, instrumentalists, studio recording jams, and live performances across campus fests.",
+  },
+  {
+    id: "club-drama", name: "Thespians Drama & Theatre Society", category: "Arts", status: "Closed",
+    meeting: "Mon & Thu, 6:00 PM", location: "Amphitheatre / Old Auditorium",
+    members: 38, lead: "Kabir Sen", icon: Mic,
+    grad: "from-amber-600 to-red-500", chip: "bg-amber-50 text-amber-700",
+    desc: "Stage acting, scriptwriting, street play (Nukkad Natak), set design, and annual theatrical productions.",
   },
   {
     id: "club-finance", name: "Finance & Investment Society", category: "Finance", status: "Closed",
@@ -168,11 +403,46 @@ const CLUBS = [
     desc: "Student-run mock portfolio, market briefings and equity research competitions. Waitlist open.",
   },
   {
+    id: "club-ecell", name: "E-Cell (Entrepreneurship Cell)", category: "Finance", status: "Open",
+    meeting: "Wednesdays, 4:30 PM", location: "Incubation Center, Room 101",
+    members: 64, lead: "Priya Sharma", icon: Rocket,
+    grad: "from-orange-500 to-amber-500", chip: "bg-orange-50 text-orange-700",
+    desc: "Startup pitch events, founder mentorship, pre-seed incubation grants, and angel investor demo days.",
+  },
+  {
+    id: "club-consulting", name: "Consulting & Strategy Club", category: "Finance", status: "Closed",
+    meeting: "Thursdays, 5:00 PM", location: "Management Block, Case Room B",
+    members: 45, lead: "Aditya Verma", icon: Briefcase,
+    grad: "from-teal-600 to-cyan-600", chip: "bg-teal-50 text-teal-700",
+    desc: "Cracking business cases, management consulting frameworks, market sizing, and mock interviews.",
+  },
+  {
     id: "club-eco", name: "Sustainability Collective", category: "Eco", status: "Open",
     meeting: "Fridays, 3:30 PM", location: "Green Hub, Central Lawn",
     members: 41, lead: "Ananya Rao", icon: Leaf,
     grad: "from-emerald-500 to-teal-500", chip: "bg-emerald-50 text-emerald-700",
     desc: "Recycling drives, community garden, composting and campus energy-audit projects.",
+  },
+  {
+    id: "club-cleanenergy", name: "Clean Energy & EV Society", category: "Eco", status: "Open",
+    meeting: "Tuesdays, 4:00 PM", location: "Renewable Energy Tech Center",
+    members: 34, lead: "Farhan Qureshi", icon: Zap,
+    grad: "from-green-600 to-emerald-400", chip: "bg-emerald-50 text-emerald-800",
+    desc: "Hands-on projects with electric vehicles, solar rooftop monitoring, and campus green tech prototypes.",
+  },
+  {
+    id: "club-mun", name: "Model UN & Debate Society", category: "Cultural", status: "Open",
+    meeting: "Wednesdays, 6:00 PM", location: "Law & Humanities Seminar Hall",
+    members: 50, lead: "Ishaan Malhotra", icon: Globe,
+    grad: "from-blue-700 to-indigo-800", chip: "bg-indigo-50 text-indigo-800",
+    desc: "Parliamentary debate, geopolitical simulations, public speaking, and national collegiate delegations.",
+  },
+  {
+    id: "club-sports", name: "Campus Sports & Athletics League", category: "Sports", status: "Open",
+    meeting: "Mon, Wed & Fri (6:30 AM / 5:00 PM)", location: "University Sports Complex",
+    members: 72, lead: "Ritu Patel", icon: Trophy,
+    grad: "from-rose-600 to-red-600", chip: "bg-rose-50 text-rose-700",
+    desc: "Badminton, basketball, football leagues, track & field training, and the annual 5K campus marathon.",
   },
 ];
 
@@ -201,6 +471,54 @@ const EVENTS = [
     desc: "Sustainability stalls, a student panel on green investing and a recycled-product marketplace.",
     agenda: ["10:00 AM: Fair opens", "12:00 PM: Green investing panel", "2:30 PM: Marketplace & prize draw"],
   },
+  {
+    id: "event-sharktank", title: "Campus Shark Tank: Student Pitch Day", tags: ["Finance"],
+    month: "NOV", day: "28", dateLabel: "Sat, Nov 28, 2026", time: "2:00 PM", venue: "Main Auditorium, Management Block",
+    seats: 150, host: "E-Cell (Entrepreneurship Cell)", rsvp: "campuspulse.edu/rsvp/sharktank-2026",
+    grad: "from-amber-500 to-orange-500",
+    desc: "Top 10 student startups pitch live before angel investors and venture capitalists for equity-free seed grants up to INR 2,00,000.",
+    agenda: ["2:00 PM: Keynote address by VC Partner", "2:45 PM: 10 Startup Pitches & Product Demos", "5:00 PM: Judges Q&A and Seed Grant Awards"],
+  },
+  {
+    id: "event-ctf", title: "CyberPulse: 12-Hour CTF Defense Challenge", tags: ["Tech"],
+    month: "DEC", day: "05", dateLabel: "Sat, Dec 5, 2026", time: "8:00 AM", venue: "Cyber Lab, Tech Tower 401",
+    seats: 100, host: "Cybersecurity & Ethical Hacking Club", rsvp: "campuspulse.edu/rsvp/cyberpulse-ctf",
+    grad: "from-cyan-600 to-blue-600",
+    desc: "Test your cybersecurity skills in web exploitation, binary reversing, cryptography, and digital forensics. Prizes and tech internships up for grabs.",
+    agenda: ["8:00 AM: System check & scoreboard access", "8:30 AM: Challenges go live", "7:30 PM: Solution walkthroughs & prize ceremony"],
+  },
+  {
+    id: "event-battlebands", title: "Echoes: Winter Acoustic Night & Battle of Bands", tags: ["Arts", "Cultural"],
+    month: "DEC", day: "12", dateLabel: "Sat, Dec 12, 2026", time: "6:00 PM", venue: "Open Air Amphitheatre",
+    seats: 250, host: "Campus Beats & Harmony (Music Club)", rsvp: "campuspulse.edu/rsvp/echoes-bands",
+    grad: "from-purple-600 to-pink-500",
+    desc: "Experience electrifying acoustic sets, rock ballads, and vocal showdowns under the winter night sky with live student food stalls.",
+    agenda: ["6:00 PM: Amphitheatre gates open", "6:30 PM: 8-Band Battle & Acoustic Jam", "9:00 PM: Headliner performance & Fan Choice Award"],
+  },
+  {
+    id: "event-mun", title: "PulseMUN 2026: Youth Diplomacy Summit", tags: ["Cultural"],
+    month: "DEC", day: "18", dateLabel: "Fri, Dec 18, 2026", time: "9:30 AM", venue: "Law & Humanities Seminar Hall",
+    seats: 110, host: "Model UN & Debate Society", rsvp: "campuspulse.edu/rsvp/pulsemun-2026",
+    grad: "from-blue-600 to-indigo-700",
+    desc: "Debate pressing global challenges, geopolitical crises, and draft consensus resolutions in simulated UN General Assembly and Security Council committees.",
+    agenda: ["9:30 AM: Opening Plenary & Keynote", "11:00 AM: Committee Sessions & Moderated Caucuses", "4:30 PM: Resolution Voting & Best Delegate Awards"],
+  },
+  {
+    id: "event-marathon", title: "Campus Run for Green: 5K Charity Marathon", tags: ["Sports", "Eco"],
+    month: "JAN", day: "09", dateLabel: "Sat, Jan 9, 2027", time: "6:30 AM", venue: "University Sports Complex → Lake Perimeter",
+    seats: 300, host: "Campus Sports League & Sustainability Collective", rsvp: "campuspulse.edu/rsvp/run-for-green",
+    grad: "from-emerald-600 to-teal-600",
+    desc: "Kick off the new semester with a scenic 5K morning run around the campus lake. 2 native trees will be planted on campus for every completed run.",
+    agenda: ["6:30 AM: Bib pickup & warmup stretch", "7:00 AM: 5K Run flag-off", "8:15 AM: Finish line breakfast & tree-planting drive"],
+  },
+  {
+    id: "event-gamejam", title: "PixelCraft: 36-Hour Indie Game Jam & VR Expo", tags: ["Tech", "Arts"],
+    month: "JAN", day: "16", dateLabel: "Sat, Jan 16, 2027", time: "10:00 AM", venue: "Media Arts Lab & Innovation Hub",
+    seats: 90, host: "Game Development & VR Guild", rsvp: "campuspulse.edu/rsvp/pixelcraft-jam",
+    grad: "from-fuchsia-600 to-rose-600",
+    desc: "Build a playable 2D, 3D, or VR game prototype around a secret theme in 36 hours. Free meals, mentor help, and community playtesting arcade.",
+    agenda: ["10:00 AM: Secret theme reveal & engine workshops", "11:30 AM: 36-hour sprint begins", "Sun 4:00 PM: Public arcade showcase & judging"],
+  },
 ];
 
 /* =====================================================================
@@ -220,6 +538,15 @@ const SYN = {
   open: ["open", "recruitment"], closed: ["closed", "recruitment", "waitlist"],
   events: ["event", "rsvp"], event: ["event", "rsvp"], upcoming: ["event", "rsvp"], happening: ["event"],
   meet: ["meets", "meeting"], meeting: ["meets"], schedule: ["meets", "time"], time: ["meets"],
+  code: ["coding", "web", "developer", "opensource", "software"], coding: ["code", "developer", "web"],
+  cyber: ["cybersecurity", "security", "hacking", "ctf"], hacking: ["cybersecurity", "ctf"], security: ["cybersecurity"],
+  game: ["games", "gaming", "unity", "unreal", "vr"], vr: ["game", "virtual", "gaming"],
+  music: ["band", "acoustic", "singing", "beats", "harmony"], song: ["music", "band"], band: ["music", "concert", "echoes"],
+  drama: ["theatre", "acting", "thespians", "play"], theater: ["theatre", "drama"], acting: ["drama", "thespians"],
+  startup: ["entrepreneurship", "ecell", "business", "pitch", "shark"], venture: ["startup", "ecell", "pitch"], pitch: ["sharktank", "startup", "ecell"],
+  consulting: ["strategy", "case", "consultant"],
+  sports: ["athletics", "marathon", "fitness", "run"], run: ["marathon", "running", "sports"], marathon: ["run", "sports"],
+  debate: ["mun", "diplomacy", "speaking", "united nations"], mun: ["debate", "diplomacy"],
 };
 
 const stem = (w) => (w.length > 4 ? w.replace(/(ing|es|s)$/, "") : w);
